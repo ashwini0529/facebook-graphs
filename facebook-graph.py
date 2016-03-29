@@ -1,3 +1,7 @@
-import facebook
+#A python script that posts on your timeline using access token.
+import requests
 
-graph = facebook.GraphAPI(access_token='your_token', version='2.2')
+face_token = 'Your access token'
+post = 'Hello'
+post.replace(' ', '+')
+requests.post("https://graph.facebook.com/me/feed/?message=" + post + "&access_token=" + face_token)
